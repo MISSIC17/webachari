@@ -1,0 +1,79 @@
+.who-are-we-wrapper {
+  background: linear-gradient(to bottom, $primary-color 0% 13%, black 13% 100%);
+  width: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: clamp(20rem, auto, 33rem);
+  z-index: 1;
+  border-top:1px solid $primary-color;
+  .circle-content {
+    position: relative;
+    font-family: "Roboto";
+    display: grid;
+    font-weight: bold;
+    place-items: center;
+    width: 95%;
+    border-radius: 50%;
+    background-color: $primary-color;
+    max-width: 35rem;
+    min-width: 20rem;
+    aspect-ratio: 1;
+    padding: 5em 0;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    white-space: nowrap;
+
+    h1 {
+      font-size: clamp(0.5rem, calc(0.9rem + 1vw), 1.7rem);
+    }
+    .first {
+      font-size: clamp(1rem, calc(2rem + 1.3vw), 3rem);
+      font-family: "Roboto Condensed", sans-serif;
+      position: relative;
+      top: -1em;
+      text-shadow: 1px 1px aqua;
+    }
+    .highlight {
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: clamp(1rem, calc(1.9rem + 0.7vw), 3rem);
+      text-shadow: 1px 1px purple, -1px -1px white;
+    }
+
+  }
+  .icon{
+    font-size: clamp(3rem,calc(3.5rem + 2vw),4rem);
+    color:$primary-color;
+    visibility: visible;
+    position: absolute;    
+    transform: rotateZ(30deg);
+  }
+  #clock{
+    top:70%;
+    right:clamp(15%,calc(15% + 2vw),20%);
+  }
+  #globe{
+    top:30%;
+    left:clamp(10%,calc(10% + 2vw),15%);
+    transform: rotateZ(-30deg);
+
+  }
+  #wifi{
+    top:70%;
+    left:clamp(15%,calc(15% + 2vw),20%);
+  }
+  #anchor{
+    right:clamp(10%,calc(10% + 2vw),15%);
+    transform: rotateZ(45deg);
+    top:30%
+  }
+  
+  
+}
+@media screen and (max-width:1000px){
+  #clock,#globe,#wifi,#anchor{
+    visibility: hidden;
+  }
+  
+}

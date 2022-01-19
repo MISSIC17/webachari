@@ -1,0 +1,71 @@
+.first-page-wrapper {
+ 
+  position: relative;
+}
+.logo-wrapper {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .name {
+    position: relative;
+    top:-1em;
+    text-align: center;
+    font-family: "Monoton", cursive;
+    font-size: clamp(1.5em, calc(1em + 6vw), 4em);
+    &-bottom-style{
+        position: relative;
+        border:1px solid black;
+        background:#000;
+        width: 85vw;height: 0.17em;
+        margin: 1em 0px;
+        top:-2.5em;
+        z-index: 11;
+        &::before{
+            position: absolute;
+            content: '';
+            width:calc(12.5px + 1.5vw);
+            aspect-ratio: 1;
+            border-radius:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background:$primary-color;
+
+        }
+
+    }
+
+  }
+  
+}
+
+.make-together-wrapper{
+    position: relative;
+    width: 100%;       
+    background-color: $primary-color;
+    padding-bottom: 0.5em;
+    .macbook-wrapper{
+        position: relative;
+        display:grid;
+        place-items:center;
+        height: 100%;
+        padding-top: 3.5rem;
+        box-shadow:  20px 10px 20px #c81d1d;
+        img{
+            width: 80%;
+            max-width: 43rem;
+        }
+        .inside-mac-text-wrapper{
+            position: absolute;
+            text-align: center;
+            // padding-bottom: 3em;
+            text-shadow: 1px 1px white;
+            
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@include mbtab{
+    html{
+        font-size: 25px !important;
+    }
+}
+@include tab{
+    html{
+    font-size: 16px !important;
+    }
+}
+@include desk{
+    html{
+        font-size: 16px !important;
+        }
+}

@@ -1,0 +1,79 @@
+@import "config";
+@import "first-page";
+@import "who-are-we";
+@import 'services';
+@import 'contact';
+@import 'footer';
+@import 'responsive';
+@import 'onLoad';
+html{
+    font-size: 30px;
+}
+body{
+    overflow-x: hidden;
+    background-color: black;
+}
+.main-wrapper{
+    position: absolute;
+    width:100vw;
+    display: none;
+}
+
+.page-top-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.page-top-wave svg {
+    position: relative;
+    display: block;
+    width: calc(131% + 1.3px);
+    height: 89px;
+}
+
+.page-top-wave .shape-fill {
+    fill: $primary-color;
+}
+
+
+
+.page-bottom-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg) translateY(100%);
+    z-index: 10;
+    box-shadow: 0px -20px 10px $primary-color;
+
+}
+
+.page-bottom-wave svg {
+    position: relative;
+    display: block;
+    width: calc(135% + 1.3px);
+    height: 120px;
+}
+
+.page-bottom-wave .shape-fill {
+    fill: $primary-color;
+}
+.spacer{
+    aspect-ratio: 900/600;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.contact-bg{
+    background:url('../assets/contact-top.svg');
+}
+.contact-layer-2{
+    background:url('../assets/contact-layer-2.svg')
+;}

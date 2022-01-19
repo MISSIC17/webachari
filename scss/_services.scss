@@ -1,0 +1,150 @@
+.our-services-wrapper {
+    background-image: url(../assets/keyboard.jpg);
+    background-size: cover;
+    background-position-x:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: grid;
+    width: 100%;
+    position: relative;
+    place-items: center;
+    padding:1em 0 4em 0 ;
+    @include mbl{
+      background-attachment: scroll;
+    }
+    @include tab{
+      background-attachment: fixed;
+    }
+
+  & header {
+      width:clamp(15rem,90%,45em);
+      display:grid;
+      place-items:center;
+      background:rgba(22, 30, 77, 0.267);
+      border-radius: 0.8rem;
+      margin:2rem 0 1rem 0;
+      white-space: nowrap;
+      height:7rem;
+      P{
+        color:$primary-color;     
+        font-weight: bolder;        
+        font-size: clamp(1.8rem, calc(1.5rem + 4vw), 3rem);
+        padding: 0.5rem 0em;
+        text-shadow: 0px 1px white;;
+        font-family: 'Lobster', cursive;
+
+    }
+  }
+  .services {
+      position: relative;
+      // height: 100%;
+      width: 100%;
+      padding:1rem 0;
+      display: grid;
+      place-items: center;
+      grid-template-rows: repeat(3, 1fr);
+      top:3em;
+      grid-gap:2rem;    
+    
+    .service{
+        display: grid;
+        background:rgb(31, 31, 29);
+        box-shadow: 3px 3px 10px 1px #000;
+        place-items: center;
+        grid-template-rows: 85% 15%;
+        width:clamp(13rem,85%,30em);
+        position: relative;
+        aspect-ratio: 1;
+        z-index: 2;
+        transition: 0.3s ease-in all;
+        *{
+        transition: 0.3s ease-in all;
+
+        }
+        div{
+            position: relative;
+            width:clamp(10rem,80%,25em);
+            background-size: cover;
+            background-position: center;    
+        aspect-ratio: 1;
+        border-radius: 50%;
+
+        }
+        figcaption{
+             color:$primary-color;
+            padding:0.5rem;
+            display:grid;
+            place-items:center;
+            height:2em;
+            font-size:clamp(1rem,calc(1rem + 2vw),2rem);
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-decoration: underline;
+        }
+        span{
+            position: absolute;
+            font-size: 4em;
+            color:white;
+            z-index: 2;
+            left:1%;
+            color:$primary-color;
+            text-shadow: -1px -1px white;
+        }
+        &:hover{
+          background-color: rgb(39, 37, 37);
+          box-shadow: 3px 3px 10px 3px #000;
+
+          span{
+            transform:scale(0.9);
+          }
+          div{
+            filter:contrast(1.1);
+            transform:scale(1.05);
+
+          }
+          figcaption{
+            transform:scale(1.05);
+            filter:saturate(1.1)
+          }
+        }
+    }
+    
+  }
+ 
+}
+@media screen and (min-width:1024px) and (max-width:1400px){
+    .services{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    display: grid;
+    place-items: center;
+    grid-template-areas:
+    "a a a b b b"
+    "c c c c c c"
+   ; 
+   #build{  
+        grid-area: a;    
+    }
+#server{
+    grid-area: b;    
+    }
+#host{    
+        grid-area: c;    
+    }
+}
+}
+
+    @media screen and (min-width:1400px) {
+        .services{
+            height:40rem;
+            display: grid;
+            position: relative;
+            place-items: center;
+
+            grid-template-columns: repeat(3, 1fr);    
+            grid-gap:2em;
+            grid-template-areas: "";            
+        }
+    }

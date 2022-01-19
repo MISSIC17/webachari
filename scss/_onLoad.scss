@@ -1,0 +1,69 @@
+.onload-wrapper {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  .onload-display {
+    position: relative;
+    background: linear-gradient(145deg, rgb(204, 193, 202), rgb(255, 255, 255));
+    border-radius: 50%;
+    aspect-ratio: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: transparent;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      border-radius: 50%;
+      animation: reddit 1s infinite alternate;
+      @keyframes reddit {
+        from {
+          box-shadow: 0px 0px 50px 1px rgba(rgb(255, 255, 255), 0.5);
+        }
+        to {
+          box-shadow: 0px 0px 50px 10px rgba(rgb(255, 255, 255), 0.5);
+        }
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 120%;
+      left: 50%;
+      transform-origin: center;
+      transform: translate(-50%,-50%);
+      aspect-ratio: 1;
+      z-index: 10;
+      width: 2em;
+      background-color: $primary-color;
+      animation: box 2s infinite forwards;
+      @keyframes box {
+        0% {
+          transform: translate(-50%,-50%) rotateY(0deg);
+        }
+        10% {
+          transform: translate(-50%,-50%)rotateZ(20deg) ;
+        }
+        100% {
+          transform:  translate(-50%,-50%) rotateZ(1080deg) ;
+        }
+      }
+    }
+  }
+  animation: onload 1s infinite alternate;
+}
+@keyframes onload {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
